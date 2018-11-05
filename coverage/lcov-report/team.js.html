@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">1.45% </span>
+        <span class="strong">18.84% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/69</span>
+        <span class='fraction'>13/69</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">16.67% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/18</span>
+        <span class='fraction'>3/18</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">20% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/20</span>
+        <span class='fraction'>4/20</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">1.52% </span>
+        <span class="strong">19.7% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/66</span>
+        <span class='fraction'>13/66</span>
       </div>
     </div>
   </div>
@@ -265,9 +265,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -300,20 +300,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -321,11 +313,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -476,10 +476,10 @@ class Team {
      * Creates an empty team object by providing a specified team name
      * @param {String} teamName 
      */
-<span class="fstat-no" title="function not covered" >    co</span>nstructor(teamName){
-<span class="cstat-no" title="statement not covered" >        this.teamName = teamName;</span>
-<span class="cstat-no" title="statement not covered" >        this.listPlayers = new Array();</span>
-<span class="cstat-no" title="statement not covered" >        this.teamValue = 0;</span>
+    constructor(teamName){
+        this.teamName = teamName;
+        this.listPlayers = new Array();
+        this.teamValue = 0;
     }
 &nbsp;
     /**
@@ -511,21 +511,21 @@ class Team {
      * @param {Player} player The player to be checked
      * @returns {Boolean} true in case that the player is in the team, false otherwise
      */
-<span class="fstat-no" title="function not covered" >    ha</span>sPlayer(player){
-<span class="cstat-no" title="statement not covered" >        for(let playerInTeam of this.listPlayers){</span>
-<span class="cstat-no" title="statement not covered" >            if(playerInTeam.equals(player)){</span>
-<span class="cstat-no" title="statement not covered" >                return true;</span>
+    hasPlayer(player){
+        for(let playerInTeam of this.listPlayers){
+            if(playerInTeam.equals(player)){
+                return true;
             }
         }
-<span class="cstat-no" title="statement not covered" >        return false;</span>
+        return false;
     }
 &nbsp;
     /**
      * Gets the total number of players currently in the team
      * @returns {Number} the number of players in the team
      */
-<span class="fstat-no" title="function not covered" >    ge</span>tNumberPlayers(){
-<span class="cstat-no" title="statement not covered" >        return this.listPlayers.length;</span>
+    getNumberPlayers(){
+        return this.listPlayers.length;
     }
 &nbsp;
     /**
@@ -533,11 +533,11 @@ class Team {
      * @param {Player} player The player to be added
      * @returns {Boolean} true in case that the player was successfully added to the team, false otherwise
      */
-<span class="fstat-no" title="function not covered" >    ad</span>dPlayer(player){
-<span class="cstat-no" title="statement not covered" >        if(!this.hasPlayer(player)){</span>
-<span class="cstat-no" title="statement not covered" >            this.listPlayers.push(player);</span>
-<span class="cstat-no" title="statement not covered" >            this.teamValue+=player.getValue();</span>
-<span class="cstat-no" title="statement not covered" >            return true;</span>
+    addPlayer(player){
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(!this.hasPlayer(player)){
+            this.listPlayers.push(player);
+            this.teamValue+=player.getValue();
+            return true;
         }
 <span class="cstat-no" title="statement not covered" >        return false;</span>
     }
@@ -685,7 +685,7 @@ exports.Team = Team;</pre></td></tr>
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Nov 05 2018 12:54:56 GMT+0100 (Hora estándar romance)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Nov 05 2018 13:46:05 GMT+0100 (Hora estándar romance)
 </div>
 </div>
 <script src="prettify.js"></script>

@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">84.21% </span>
+        <span class="strong">31.58% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>16/19</span>
+        <span class='fraction'>6/19</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">84.21% </span>
+        <span class="strong">31.58% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>16/19</span>
+        <span class='fraction'>6/19</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -94,32 +94,32 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -133,14 +133,14 @@ const Player =  require('./player').Player;
  * @param {Object} jsonObject The collection of player profiles
  * @returns {Array&lt;Player&gt;} The collection of players created from the JSON file 
  */
-function extractDataFromRawJSON(jsonObject){
-    let playerData = [];
-    for(let player of jsonObject){
-        let id = player[jsonConstants.player_id];
-        let playerObj = Player.fromDatasetJSONObject(id,player);
-        playerData.push(playerObj);
+function <span class="fstat-no" title="function not covered" >extractDataFromRawJSON(</span>jsonObject){
+    let playerData = <span class="cstat-no" title="statement not covered" >[];</span>
+<span class="cstat-no" title="statement not covered" >    for(let player of jsonObject){</span>
+        let id = <span class="cstat-no" title="statement not covered" >player[jsonConstants.player_id];</span>
+        let playerObj = <span class="cstat-no" title="statement not covered" >Player.fromDatasetJSONObject(id,player);</span>
+<span class="cstat-no" title="statement not covered" >        playerData.push(playerObj);</span>
     }
-    return playerData;
+<span class="cstat-no" title="statement not covered" >    return playerData;</span>
 }
 &nbsp;
 /**
@@ -149,17 +149,17 @@ function extractDataFromRawJSON(jsonObject){
  * @returns {Object} An object generated by parsing the JSON file
  * @throws {Error} in case that there were problems parsing the JSON file
  */
-function readJSONData(filename){
-    let jsonObject = undefined;
-    try{
-        jsonObject = jsonReader(filename);
+function <span class="fstat-no" title="function not covered" >readJSONData(</span>filename){
+    let jsonObject = <span class="cstat-no" title="statement not covered" >undefined;</span>
+<span class="cstat-no" title="statement not covered" >    try{</span>
+<span class="cstat-no" title="statement not covered" >        jsonObject = jsonReader(filename);</span>
     } catch(error){
 <span class="cstat-no" title="statement not covered" >        if(error instanceof SyntaxError){</span>
 <span class="cstat-no" title="statement not covered" >            throw new SyntaxError('JSON in incorrect format');</span>
         } 
         else <span class="cstat-no" title="statement not covered" >throw Error('Problem reading the file');</span>
     }
-    return jsonObject;
+<span class="cstat-no" title="statement not covered" >    return jsonObject;</span>
 }
 &nbsp;
 exports.readJSONData = readJSONData;
@@ -169,7 +169,7 @@ exports.extractDataFromRawJSON =extractDataFromRawJSON;</pre></td></tr>
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Nov 05 2018 12:54:56 GMT+0100 (Hora estándar romance)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Nov 05 2018 13:46:05 GMT+0100 (Hora estándar romance)
 </div>
 </div>
 <script src="prettify.js"></script>

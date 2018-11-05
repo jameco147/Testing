@@ -11,7 +11,31 @@ test('Test constructor', () => {
 test('Test hasPlayer', () => {
     
     let team = new Team('Real Catalonia');
-    team.addPlayer('Cristiano Ronaldo');
-    expect(team.getNumberPlayers).toBe(1);
-  
+    let player = new Player(86);
+    team.addPlayer(player);
+    let player2 = new Player(90);
+   
+    expect(team.hasPlayer(player)).toBe(true);
+    expect(team.hasPlayer(player2)).toBe(false);      
+});
+
+test('Test getNumberPlayers', () => {
+    
+    let team = new Team('Real Catalonia');
+    let player = new Player(86);
+    team.addPlayer(player);
+    let player2 = new Player(90);
+    team.addPlayer(player2);
+   
+    expect(team.getNumberPlayers()).toBe(2);     
+});
+
+test('Test addPlayer', () => {
+    
+    let team = new Team('Real Catalonia');
+    let player = new Player(86);
+   
+    expect(team.addPlayer(player)).toBe(true);
+    
+      
 });
