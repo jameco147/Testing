@@ -34,8 +34,10 @@ test('Test addPlayer', () => {
     
     let team = new Team('Real Catalonia');
     let player = new Player(86);
+    
    
     expect(team.addPlayer(player)).toBe(true);
+    expect(team.addPlayer(player)).toBe(false);
     
       
 });
