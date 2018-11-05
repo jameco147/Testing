@@ -37,7 +37,34 @@ test('Test addPlayer', () => {
     
    
     expect(team.addPlayer(player)).toBe(true);
-    expect(team.addPlayer(player)).toBe(false);
-    
-      
+    expect(team.addPlayer(player)).toBe(false);   
 });
+
+//Tenemos dudas
+test('Test addPlayers', () => {
+    
+    let team = new Team('Real Catalonia');
+    let players = [];
+    let player = new Player(86);
+    let player2 = new Player(12);
+    players.push(player);
+    players.push(player2);
+
+    team.addPlayers(players);
+    expect(player.getID()).toBe(86);
+   
+});
+
+test('Test getTeamOverallQuality', () => {
+    
+    let team = new Team('Real Catalonia');
+    expect(team.getTeamOverallQuality()).toBe(0);   
+});
+
+test('Test getRandomTeamTactic', () => {
+    
+    //let team = new Team('Levante');
+    expect(Team.getRandomTeamTactic()).toBe(String);
+    
+});
+
