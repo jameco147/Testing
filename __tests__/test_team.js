@@ -51,7 +51,8 @@ test('Test addPlayers', () => {
     players.push(player2);
 
     team.addPlayers(players);
-    expect(player.getID()).toBe(86);
+    expect(team.hasPlayer(player)).toBe(true);
+    expect(team.hasPlayer(player2)).toBe(true);
    
 });
 
@@ -62,9 +63,14 @@ test('Test getTeamOverallQuality', () => {
 });
 
 test('Test getRandomTeamTactic', () => {
+
+    let availableTactics = [ '3-4-3', '3-5-2', '3-6-1', '4-3-3', '4-4-2', '4-5-1', '5-3-2' ];
     
-    //let team = new Team('Levante');
-    expect(Team.getRandomTeamTactic()).toBe(String);
+    for(let i = 0; i <= 1000; i++){
+        let tactic = Team.getRandomTeamTactic();
+        expect(availableTactics.includes(tactic)).toBe(true);
+    }
+    
     
 });
 

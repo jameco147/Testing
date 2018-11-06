@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1541447939931" clover="3.2.0">
-  <project timestamp="1541447939931" name="All files">
+<coverage generated="1541507426989" clover="3.2.0">
+  <project timestamp="1541507426989" name="All files">
     <metrics statements="147" coveredstatements="45" conditionals="65" coveredconditionals="8" methods="40" coveredmethods="11" elements="252" coveredelements="64" complexity="0" loc="147" ncloc="147" packages="1" files="4" classes="4">
       <file name="dataset_utils.js" path="C:\Users\Javi\Desktop\Testing\app\data\dataset_utils.js">
         <metrics statements="20" coveredstatements="6" conditionals="39" coveredconditionals="0" methods="4" coveredmethods="0"/>
@@ -85,11 +85,11 @@
         <line num="115" count="0" type="stmt"/>
         <line num="123" count="0" type="stmt"/>
         <line num="131" count="0" type="stmt"/>
-        <line num="139" count="11" type="stmt"/>
+        <line num="139" count="16" type="stmt"/>
         <line num="147" count="0" type="stmt"/>
-        <line num="156" count="5" type="cond" truecount="4" falsecount="0"/>
-        <line num="157" count="2" type="stmt"/>
-        <line num="159" count="3" type="stmt"/>
+        <line num="156" count="8" type="cond" truecount="4" falsecount="0"/>
+        <line num="157" count="4" type="stmt"/>
+        <line num="159" count="4" type="stmt"/>
         <line num="163" count="1" type="stmt"/>
       </file>
       <file name="team.js" path="C:\Users\Javi\Desktop\Testing\app\data\team.js">
@@ -100,9 +100,9 @@
         <line num="21" count="0" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
-        <line num="46" count="9" type="stmt"/>
-        <line num="47" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="48" count="2" type="stmt"/>
+        <line num="46" count="11" type="stmt"/>
+        <line num="47" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="48" count="4" type="stmt"/>
         <line num="51" count="7" type="stmt"/>
         <line num="59" count="1" type="stmt"/>
         <line num="68" count="7" type="cond" truecount="2" falsecount="0"/>
@@ -113,9 +113,9 @@
         <line num="81" count="1" type="stmt"/>
         <line num="82" count="2" type="stmt"/>
         <line num="91" count="1" type="stmt"/>
-        <line num="99" count="1" type="stmt"/>
-        <line num="100" count="1" type="stmt"/>
-        <line num="101" count="1" type="stmt"/>
+        <line num="99" count="1001" type="stmt"/>
+        <line num="100" count="1001" type="stmt"/>
+        <line num="101" count="1001" type="stmt"/>
         <line num="113" count="0" type="stmt"/>
         <line num="115" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="116" count="0" type="stmt"/>

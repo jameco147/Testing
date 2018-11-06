@@ -97,7 +97,7 @@ class Team {
      */
     static getRandomTeamTactic(){
         let availableTactics = [ '3-4-3', '3-5-2', '3-6-1', '4-3-3', '4-4-2', '4-5-1', '5-3-2' ];
-        let randomIndex = Math.random() * availableTactics.length;
+        let randomIndex = Math.round(Math.random() * (availableTactics.length -1));
         return availableTactics[randomIndex];
     }
 
