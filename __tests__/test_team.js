@@ -93,3 +93,36 @@ test('Test  _parseTactic more than 10', () => {
     expect(() => Team._parseTactic(tactic3)).toThrowError(Error);
 });
 
+test('Test _getRandomPlayers insufficient players to make a team', () => {
+
+    let players = [];
+    for(let i = 0; i <= 15; i++){
+       players.push(new Player(i));   
+    }  
+    console.log(players.length);
+    expect(() => Team._getRandomPlayers(players, 20)).toThrowError(Error);
+});
+
+//Preguntar a Victor, estamos atascados
+test('Test _getRandomPlayers', () => {
+
+    let players = [];
+    let numeroJugadores = 10;
+    for(let i = 0; i <= 15; i++){
+       players.push(new Player(i));   
+    }  
+
+    expect(Array.isArray(Team._getRandomPlayers(players,numeroJugadores))).toBe(true);
+ 
+});
+
+
+test('Test createRandomTeam', () => {
+
+
+    
+ 
+});
+
+
+

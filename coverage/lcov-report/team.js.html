@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">45.33% </span>
+        <span class="strong">57.33% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>34/75</span>
+        <span class='fraction'>43/75</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">45% </span>
+        <span class="strong">55% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>9/20</span>
+        <span class='fraction'>11/20</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">55% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>10/20</span>
+        <span class='fraction'>11/20</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">44.44% </span>
+        <span class="strong">56.94% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>32/72</span>
+        <span class='fraction'>41/72</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -264,7 +264,8 @@
 219
 220
 221
-222</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+222
+223</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -409,18 +410,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -629,19 +631,20 @@ class Team {
      * @returns {Array&lt;Player&gt;} The group of players selected
      * @throws Error in case that there are not enough players to choose randomly
      */
-<span class="fstat-no" title="function not covered" >    st</span>atic _getRandomPlayers(listPlayers,numberPlayers){
-<span class="cstat-no" title="statement not covered" >        if(listPlayers.length&lt;numberPlayers){</span>
-<span class="cstat-no" title="statement not covered" >            throw Error('Insufficient players to make a team');</span>
+    static _getRandomPlayers(listPlayers,numberPlayers){
+        if(listPlayers.length&lt;numberPlayers){
+            throw Error('Insufficient players to make a team');
         }
-        let selectedPlayers = <span class="cstat-no" title="statement not covered" >new Array();</span> //Array used to put chosen players
-        let copyListPlayers = <span class="cstat-no" title="statement not covered" >listPlayers.slice();</span> //Array that copies the original pool of players. Used to dynamically remove players
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        for(let playersAdded = 0; playersAdded&lt;numberPlayers; playersAdded++){ //For each random player to select</span>
-            let indexPlayer = <span class="cstat-no" title="statement not covered" >Math.floor(Math.random()*copyListPlayers.length);</span> //Index of the random player to be chosen
-            let player = <span class="cstat-no" title="statement not covered" >copyListPlayers[indexPlayer];</span>
-<span class="cstat-no" title="statement not covered" >            selectedPlayers.push(player);</span>
+        let selectedPlayers = new Array(); //Array used to put chosen players
+        let copyListPlayers = listPlayers.slice(); //Array that copies the original pool of players. Used to dynamically remove players
+&nbsp;
+        for(let playersAdded = 0; playersAdded&lt;numberPlayers; playersAdded++){ //For each random player to select
+            let indexPlayer = Math.floor(Math.random()*copyListPlayers.length); //Index of the random player to be chosen
+            let player = copyListPlayers[indexPlayer];
+            selectedPlayers.push(player);
         }
-<span class="cstat-no" title="statement not covered" >        return selectedPlayers;</span>
+        return selectedPlayers;
     }
 &nbsp;
     /**
@@ -712,7 +715,7 @@ exports.Team = Team;</pre></td></tr>
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Nov 07 2018 14:09:00 GMT+0100 (Hora estándar romance)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Nov 07 2018 15:43:34 GMT+0100 (Hora estándar romance)
 </div>
 </div>
 <script src="prettify.js"></script>

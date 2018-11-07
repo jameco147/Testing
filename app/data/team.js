@@ -146,6 +146,7 @@ class Team {
         if(listPlayers.length<numberPlayers){
             throw Error('Insufficient players to make a team');
         }
+
         let selectedPlayers = new Array(); //Array used to put chosen players
         let copyListPlayers = listPlayers.slice(); //Array that copies the original pool of players. Used to dynamically remove players
 
