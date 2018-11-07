@@ -117,10 +117,19 @@ class Team {
             playersPerPosition.length + ' elements');
         }
         //Parse tactic elements to numbers
-        playersPerPosition = playersPerPosition.map( elem => parseInt(elem) );
+        playersPerPosition = playersPerPosition.map( elem => parseInt(elem) );    
         //If any of the elements is not an integer, then raise error
-        if( playersPerPosition.any( n => isNaN(n) ) ){
+        if( playersPerPosition.some( n => isNaN(n) ) ){
             throw Error('One of the specified positions is not a number');
+        }
+
+        let positions = 0;
+        let resul = 0;
+        for(positions of playersPerPosition){
+            resul = resul + positions;
+        }
+        if(resul > 10){
+            throw Error('Not more than 10 players');
         }
         
         return playersPerPosition;

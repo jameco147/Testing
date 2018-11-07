@@ -69,8 +69,27 @@ test('Test getRandomTeamTactic', () => {
     for(let i = 0; i <= 1000; i++){
         let tactic = Team.getRandomTeamTactic();
         expect(availableTactics.includes(tactic)).toBe(true);
-    }
+    }  
+});
+
+
+test('Test  _parseTactic is not a number', () => {
     
+    let tactic = '3-4-Pepe'; 
+    expect(() => Team._parseTactic(tactic)).toThrowError(Error);
+});
+
+test('Test  _parseTactic equal array', () => {
     
+    let tactic2 = '3-4-3';
+    let array = [3,4,3];
+    expect(Team._parseTactic(tactic2)).toEqual(array);
+});
+
+
+test('Test  _parseTactic more than 10', () => {
+    
+    let tactic3 = '4-4-9';
+    expect(() => Team._parseTactic(tactic3)).toThrowError(Error);
 });
 
