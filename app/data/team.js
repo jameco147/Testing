@@ -143,20 +143,27 @@ class Team {
      * @throws Error in case that there are not enough players to choose randomly
      */
     static _getRandomPlayers(listPlayers,numberPlayers){
-        if(listPlayers.length<numberPlayers){
-            throw Error('Insufficient players to make a team');
-        }
-
-        let selectedPlayers = new Array(); //Array used to put chosen players
-        let copyListPlayers = listPlayers.slice(); //Array that copies the original pool of players. Used to dynamically remove players
-
-        for(let playersAdded = 0; playersAdded<numberPlayers; playersAdded++){ //For each random player to select
+        let comprobacion = true;
+          if(listPlayers.length<numberPlayers){
+              throw Error('Insufficient players to make a team');
+          }
+  
+          let selectedPlayers = new Array(); //Array used to put chosen players
+          let copyListPlayers = listPlayers.slice(); //Array that copies the original pool of players. Used to dynamically remove players
+  
+          for(let playersAdded = 0; playersAdded<numberPlayers; ){ //For each random player to select
             let indexPlayer = Math.floor(Math.random()*copyListPlayers.length); //Index of the random player to be chosen
             let player = copyListPlayers[indexPlayer];
-            selectedPlayers.push(player);
-        }
-        return selectedPlayers;
-    }
+  
+            if (selectedPlayers.includes(player, 0) === false) {
+              selectedPlayers.push(player);
+              playersAdded++
+            }
+  
+          }
+          return selectedPlayers;
+      }
+  
 
     /**
      * Static method employed to generate a random team (11 players) from a list of possible players

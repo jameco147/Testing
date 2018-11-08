@@ -105,24 +105,37 @@ test('Test _getRandomPlayers insufficient players to make a team', () => {
 
 //Preguntar a Victor, estamos atascados
 test('Test _getRandomPlayers', () => {
+    let jugadores = [];
+    let valor = 10;
+    let jugadoresSeleccionados = [];
+    let contador = 0;
+    let hayDiez = false;
+  
+    for (var i = 0; i < 20; i++) {
+      let jugador = new Player(i+1);
+      jugadores.push(jugador);
+      // console.log(jugadores[i]);
+    }
+  
+      jugadoresSeleccionados = Team._getRandomPlayers(jugadores,valor);
+  
+      for (var i = 0; i < jugadores.length; i++) {
+        for (var a = 0; a < jugadoresSeleccionados.length; a++) {
+          if (jugadores[i] === jugadoresSeleccionados[a]) {
+            contador++;
+          }
+        }
+      }
+  
+      if (contador === valor) {
+        hayDiez = true;
+      }
+  
+      expect(hayDiez).toBe(true);
+  
+  });
 
-    let players = [];
-    let numeroJugadores = 10;
-    for(let i = 0; i <= 15; i++){
-       players.push(new Player(i));   
-    }  
 
-    expect(Array.isArray(Team._getRandomPlayers(players,numeroJugadores))).toBe(true);
- 
-});
-
-
-test('Test createRandomTeam', () => {
-
-
-    
- 
-});
 
 
 
