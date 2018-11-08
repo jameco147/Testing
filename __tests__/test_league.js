@@ -18,12 +18,21 @@ test('Test addTeam', () => {
 
 });
 
-/*
+
 test('Test addTeam expecting error', () => {
-    let league = new League(22);
+    let league = new League(3);
+
     let catalonia = new Team('Catalonia');
-    league.addTeam(catalonia);
-    expect(league.listTeams.length).toBe(1);
+    let madrid = new Team('Madrid');
+    let levante = new Team('levante');
+    let valencia = new Team('valencia');
+
+    league.addTeam(madrid);
+    league.addTeam(levante);
+    league.addTeam(valencia);
+
+    
+    expect(() => league.addTeam(catalonia)).toThrowError(Error);
+    
 
 });
-*/
