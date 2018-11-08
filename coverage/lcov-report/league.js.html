@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for league.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> league.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.57% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">20% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/20</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">const Team = require('./team').Team;
+&nbsp;
+/**
+ * A class that represents a fantasy football league.
+ */
+class League{
+    /**
+     * Class constructor for the league
+     * @param {Number} numberOfTeams An integer that represents the number of teams that should participate in the league
+     */
+    constructor(numberOfTeams){
+        this.listTeams = new Array();
+        this.numberOfTeams = numberOfTeams;
+        this.calendar = null;
+        this.leagueTable = null;
+    }
+&nbsp;
+    /**
+     * Method employed to add a team to the current league.
+     * @param {Team} team The team to be added to the league
+     * @throws {Error} In case that the league is already full
+     */
+<span class="fstat-no" title="function not covered" >    ad</span>dTeam(team){
+<span class="cstat-no" title="statement not covered" >        if(this.listTeams.length==this.numberOfTeams){</span>
+<span class="cstat-no" title="statement not covered" >            throw Error('The league is full with teams!');</span>
+        }
+<span class="cstat-no" title="statement not covered" >        this.listTeams.push(team);</span>
+    }
+&nbsp;
+    /*
+    * TODO: Creates a calendar that determines when teams play against each other.
+    * Each team should play another team twice: First home, and then away
+    * A team can only re-match another team when it has matched all other teams (e.g., 2 rounds league)
+    * A team must play the same number of away and home matches throughout the league
+    */
+<span class="fstat-no" title="function not covered" >    cr</span>eateCalendar(){
+<span class="cstat-no" title="statement not covered" >        this.calendar = [];</span>
+    }
+&nbsp;
+    /**
+     * Creates a League object based on a pool of players, a number of teams to compete, and a minimum and maximum team value
+     * @param {Array&lt;Player&gt;} playerData An array of player profiles that will be selected to generate the teams
+     * @param {Number} numberOfTeams An integer that delimits the number of teams that will compete in the league
+     * @param {Number} minTeamValue The minimum amount of euros that will be spent by clubs on forming the team
+     * @param {Number} maxTeamValue The maximum amount of euros that will be spent by clubs on forming the team
+     * @returns {League} The league that has been created
+     * @throws {Error} In case that there are not enough players to create the desired number of teams, or in case that the minimum team value is higher than the maximum team value 
+     */
+<span class="fstat-no" title="function not covered" >    st</span>atic createRandomLeague(playerData,numberOfTeams,minTeamValue,maxTeamValue){
+        
+<span class="cstat-no" title="statement not covered" >        if(playerData.length &lt; numberOfTeams * 11){</span>
+<span class="cstat-no" title="statement not covered" >            throw Error('Not enough players to create the league');</span>
+        }
+        
+        let newLeague = <span class="cstat-no" title="statement not covered" >new League(numberOfTeams);</span>
+        let playersInLeague = <span class="cstat-no" title="statement not covered" >new Set();</span>
+<span class="cstat-no" title="statement not covered" >        for(let i=0;i&lt;numberOfTeams;i++){ //For each team to be created</span>
+            //Filter players that are currently available
+            let playersAvailable = <span class="cstat-no" title="statement not covered" >playerData.filter(<span class="fstat-no" title="function not covered" >pl</span>ayer=&gt;<span class="cstat-no" title="statement not covered" >!playersInLeague.has(player))</span>;</span>
+            //Select random team budget between the minimum and maximum specified as parameter
+            let teamValue = <span class="cstat-no" title="statement not covered" >Math.random() * (maxTeamValue-minTeamValue) + minTeamValue;</span>
+            //Create the team randomly
+            let team = <span class="cstat-no" title="statement not covered" >Team.createRandomTeam(playersAvailable,Team.getRandomTeamTactic(),"Team"+i,teamValue);</span>
+            //Add the team to the league
+<span class="cstat-no" title="statement not covered" >            newLeague.addTeam(team);</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return newLeague;</span>
+    }
+}
+&nbsp;
+exports.League = League;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Nov 08 2018 10:41:29 GMT+0100 (Hora estándar romance)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>
