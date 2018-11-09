@@ -1,9 +1,7 @@
 const extractDataFromRawJSON = require('../app/data/json_reader').extractDataFromRawJSON;
 const readJSONData = require('../app/data/json_reader').readJSONData;
-const isForward = require('../app/data/dataset_utils').isForward;
-const isBack = require('../app/data/dataset_utils').isBack;
-const isMidfielder = require('../app/data/dataset_utils').isMidfielder;
-const isGoalKeeper = require('../app/data/dataset_utils').isGoalKeeper;
+const Player =  require('../app/data/player').Player;
+const Team = require('../app/data/team').Team;
 
 
 test('Test readJSONData 1: Valid JSON', () => {
