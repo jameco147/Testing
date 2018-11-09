@@ -1,7 +1,9 @@
 const extractDataFromRawJSON = require('../app/data/json_reader').extractDataFromRawJSON;
 const readJSONData = require('../app/data/json_reader').readJSONData;
-const Player =  require('../app/data/player').Player;
-const Team = require('../app/data/team').Team;
+const isForward = require('../app/data/dataset_utils').isForward;
+const isBack = require('../app/data/dataset_utils').isBack;
+const isMidfielder = require('../app/data/dataset_utils').isMidfielder;
+const isGoalKeeper = require('../app/data/dataset_utils').isGoalKeeper;
 
 
 test('Test readJSONData 1: Valid JSON', () => {
@@ -34,11 +36,11 @@ test('Test readJSONData 1: Valid JSON', () => {
 });
 
 test('Test readJSONData 2: Error JSON', () => {
-    expect( f => readJSONData('./data/sample_error.json') ).toThrowError(SyntaxError)
+    expect(f => readJSONData('./data/sample_error.json')).toThrowError(SyntaxError)
 });
 
 test('Test readJSONData 3: No file found', () => {
-    expect( f => readJSONData('./data/idontexist.json') ).toThrowError(Error);
+    expect(f => readJSONData('./data/idontexist.json')).toThrowError(Error);
 });
 
 test('Test extractDataFromRawJSON', () => {
@@ -57,13 +59,103 @@ test('Test extractDataFromRawJSON', () => {
 });
 
 
+test('Test isForward', () => {
+    posicion = new Set();
+    posicion.add('RS');
+    expect(isForward(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('CF');
+    expect(isForward(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('LF');
+    expect(isForward(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('LS');
+    expect(isForward(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('ST');
+    expect(isForward(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('RF');
+    expect(isForward(posicion)).toBe(true);
+});
 
+test('Test isBack', () => {
+    posicion = new Set();
+    posicion.add('CB');
+    expect(isBack(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('LB');
+    expect(isBack(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('LCB');
+    expect(isBack(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('LWB');
+    expect(isBack(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('RB');
+    expect(isBack(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('RCB');
+    expect(isBack(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('RWB');
+    expect(isBack(posicion)).toBe(true);
 
+});
 
+test('Test isMidfielder', () => {
+    posicion = new Set();
+    posicion.add('CAM');
+    expect(isMidfielder(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('CM');
+    expect(isMidfielder(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('LAM');
+    expect(isMidfielder(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('CDM');
+    expect(isMidfielder(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('LCM');
+    expect(isMidfielder(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('LDM');
+    expect(isMidfielder(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('LM');
+    expect(isMidfielder(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('RAM');
+    expect(isMidfielder(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('RCM');
+    expect(isMidfielder(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('RDM');
+    expect(isMidfielder(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('RM');
+    expect(isMidfielder(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('LW');
+    expect(isMidfielder(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('RW');
+    expect(isMidfielder(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('W');
+    expect(isMidfielder(posicion)).toBe(false);
 
+});
 
-
-
-
-
-
+test('Test isGoalKeeper', () => {
+    posicion = new Set();
+    posicion.add('GK');
+    expect(isGoalKeeper(posicion)).toBe(true);
+    posicion = new Set();
+    posicion.add('RF');
+    expect(isGoalKeeper(posicion)).toBe(false);
+});
