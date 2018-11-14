@@ -21,7 +21,7 @@ class League{
      * @throws {Error} In case that the league is already full
      */
     addTeam(team){
-        if((this.listTeams.length + 1)>this.numberOfTeams){
+        if(this.listTeams.length==this.numberOfTeams){
             throw Error('The league is full with teams!');
         }
         this.listTeams.push(team);
