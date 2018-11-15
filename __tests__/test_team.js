@@ -51,7 +51,7 @@ test('Test addPlayers', () => {
 
     team.addPlayers(players);
 
-    console.log(team.listPlayers);
+    //console.log(team.listPlayers);
 
     expect(team.listPlayers[0].id).toBe(86);
     expect(team.listPlayers[1].id).toBe(12);
@@ -101,7 +101,7 @@ test('Test _getRandomPlayers insufficient players to make a team', () => {
     for(let i = 0; i <= 15; i++){
        players.push(new Player(i));   
     }  
-    console.log(players.length);
+   // console.log(players.length);
     expect(() => Team._getRandomPlayers(players, 20)).toThrowError(Error);
 });
 
@@ -141,12 +141,17 @@ test('Test _getRandomPlayers', () => {
   test('Test create random team', () => {
 
     let players = [];
+    let tactic ="4-4-2";
+    let teamName = "Valencia";
+    let teamValue = 11000000;
+
     for(let i = 0; i <= 22; i++){
        players.push(new Player(i));   
     }  
-    let team = new Team('Valencia');
-    team.addPlayers(players);
+
+
     
+    expect(() => Team.createRandomTeam(players,tactic,teamName,teamValue)).toThrowError(Error);
 });
 
 
