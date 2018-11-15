@@ -40,7 +40,6 @@ test('Test addPlayer', () => {
     expect(team.addPlayer(player)).toBe(false);   
 });
 
-//Tenemos dudas
 test('Test addPlayers', () => {
     
     let team = new Team('Real Catalonia');
@@ -51,8 +50,11 @@ test('Test addPlayers', () => {
     players.push(player2);
 
     team.addPlayers(players);
-    expect(team.hasPlayer(player)).toBe(true);
-    expect(team.hasPlayer(player2)).toBe(true);
+
+    console.log(team.listPlayers);
+
+    expect(team.listPlayers[0].id).toBe(86);
+    expect(team.listPlayers[1].id).toBe(12);
    
 });
 
@@ -103,7 +105,7 @@ test('Test _getRandomPlayers insufficient players to make a team', () => {
     expect(() => Team._getRandomPlayers(players, 20)).toThrowError(Error);
 });
 
-//Preguntar a Victor, estamos atascados
+
 test('Test _getRandomPlayers', () => {
     let jugadores = [];
     let valor = 10;
@@ -136,6 +138,15 @@ test('Test _getRandomPlayers', () => {
   });
 
 
+  test('Test create random team', () => {
 
+    let players = [];
+    for(let i = 0; i <= 22; i++){
+       players.push(new Player(i));   
+    }  
+    let team = new Team('Valencia');
+    team.addPlayers(players);
+    
+});
 
 
